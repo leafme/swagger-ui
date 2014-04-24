@@ -298,7 +298,7 @@ function program8(depth0,data) {
   buffer += "<div class='info' id='api_info'>\n  ";
   stack1 = helpers['if'].call(depth0, depth0.info, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</div>\n<div class='container' id='resources_container'>\n    <ul id='resources'>\n    </ul>\n\n    <div class=\"footer\">\n        <br>\n        <br>\n        <h4 style=\"color: #999\">[ <span style=\"font-variant: small-caps\">base url</span>: ";
+  buffer += "\n</div>\n<div class='container' id='resources_container'>\n    <ul id='resources'>\n    </ul>\n\n    <div class=\"footer\">\n        <br>\n        <br>\n        <h4>[ <span style=\"font-variant: small-caps\">base url</span>: ";
   if (stack1 = helpers.basePath) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.basePath; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
@@ -394,7 +394,7 @@ function program18(depth0,data) {
 function program20(depth0,data) {
   
   
-  return "\n          <div class='sandbox_header'>\n            <input class='submit' name='commit' type='button' value='Try it out!' />\n            <a href='#' class='response_hider' style='display:none'>Hide Response</a>\n            <img alt='Throbber' class='response_throbber' src='images/throbber.gif' style='display:none' />\n          </div>\n          ";
+  return "\n          <div class='sandbox_header'>\n            <input class='submit btn btn-green' name='commit' type='button' value='Try it out!' />\n            <a href='#' class='response_hider' style='display:none'>Hide Response</a>\n            <img alt='Throbber' class='response_throbber' src='images/throbber.gif' style='display:none' />\n          </div>\n          ";
   }
 
   buffer += "\n  <ul class='operations' >\n    <li class='";
@@ -1062,8 +1062,8 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 
 function program1(depth0,data) {
   
-  
-  return " : ";
+  var buffer = "";
+  return buffer;
   }
 
   buffer += "<div class='heading'>\n  <h2>\n    <a href='#!/";
@@ -1078,7 +1078,7 @@ function program1(depth0,data) {
   if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</a> ";
+    + "</a> \n  </h2>\n  <h3 class='resource-description'>";
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
   if (stack1 = helpers.description) { stack1 = stack1.call(depth0, options); }
   else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
@@ -1087,7 +1087,7 @@ function program1(depth0,data) {
   if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n  </h2>\n  <ul class='options'>\n    <li>\n      <a href='#!/";
+  buffer += "</h3>\n  <ul class='options'>\n    <li>\n      <a href='#!/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.id; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)

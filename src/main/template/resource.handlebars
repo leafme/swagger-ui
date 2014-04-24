@@ -1,7 +1,8 @@
 <div class='heading'>
   <h2>
-    <a href='#!/{{id}}' onclick="Docs.toggleEndpointListForResource('{{id}}');">{{name}}</a> {{#description}} : {{/description}}{{{description}}}
+    <a href='#!/{{id}}' onclick="Docs.toggleEndpointListForResource('{{id}}');">{{name}}</a> 
   </h2>
+  <h3 class='resource-description'>{{#description}}{{/description}}{{{description}}}</h3>
   <ul class='options'>
     <li>
       <a href='#!/{{id}}' id='endpointListTogger_{{id}}'
